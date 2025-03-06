@@ -5,10 +5,8 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   const userInput = req.query.input;
   
-  // Safe way to parse input instead of eval
-  const result = test(userInput) + 2; 
-  // const result = Number(userInput) + 2; 
-  let testSLA=2;
+  Safe way to parse input instead of eval
+  const result = Number(userInput) + 2; 
   res.send(`Result is: ${result}`);
 });
 
